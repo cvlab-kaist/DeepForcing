@@ -147,6 +147,18 @@ p {
 }
 
 /* --- Responsive author layout improvements --- */
+.author-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1.2rem;
+}
+
+.author-divider {
+  color: var(--light-text);
+}
+
 @media (max-width: 800px) {
   .author-row { gap: 4px 10px; }
   .author-row .author-col { flex: 0 0 48%; max-width: 48%; padding: 0 0px; margin: 0px 0; }
@@ -1251,7 +1263,7 @@ pre {
 
 .video-toggle-hint {
   position: absolute;
-  left: 12px;
+  right: 12px;
   top: 12px;
   padding: 6px 12px;
   border-radius: 999px;
@@ -1392,6 +1404,81 @@ pre {
 
 .video-lightbox-close:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+
+.video-prompt-btn {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  border: none;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.video-prompt-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: translateY(-1px);
+}
+
+.video-prompt-btn i {
+  font-size: 0.75rem;
+}
+
+.prompt-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 12000;
+}
+
+.prompt-modal.active {
+  display: flex;
+}
+
+.prompt-modal-card {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 32px 28px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+}
+
+.prompt-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.prompt-modal-body h4 {
+  margin-bottom: 0.85rem;
+}
+
+.prompt-modal-body .prompt-text {
+  max-height: 320px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  color: var(--light-text);
 }
 
 .comparison-slider {

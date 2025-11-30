@@ -102,39 +102,18 @@
                     </div>
                 </div>
             </div>
-            <div class="base-row author-row">
-                <div class="base-col author-col">
-                    <a href="https://yj-142150.github.io/jungyi/" target="_blank" class="author-text">
-                        Jung Yi<sup></sup>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="https://scholar.google.com/citations?user=7cyLEQ0AAAAJ&hl=en/" target="_blank" class="author-text">
-                        Wooseok Jang<sup></sup>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="https://openreview.net/profile?id=~Paul_Hyunbin_Cho1" target="_blank" class="author-text">
-                        Paul Hyunbin Cho<sup></sup>
-                    </a>
-                </div>
-            </div>
-            <div class="base-row author-row">
-                <div class="base-col author-col">
-                    <a href="https://nam-jisu.github.io/" target="_blank" class="author-text">
-                        Jisu Nam<sup></sup>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="https://yoon-heez.github.io/" target="_blank" class="author-text">
-                        Heeji Yoon<sup></sup>
-                    </a>
-                </div>
-                <div class="base-col author-col">
-                    <a href="https://cvlab.kaist.ac.kr/" target="_blank" class="author-text">
-                        Seungryong Kim<sup></sup>
-                    </a>
-                </div>
+            <div class="author-line">
+                <a href="https://yj-142150.github.io/jungyi/" target="_blank" class="author-text">Jung Yi</a>
+                <span class="author-divider">·</span>
+                <a href="https://scholar.google.com/citations?user=7cyLEQ0AAAAJ&hl=en/" target="_blank" class="author-text">Wooseok Jang</a>
+                <span class="author-divider">·</span>
+                <a href="https://openreview.net/profile?id=~Paul_Hyunbin_Cho1" target="_blank" class="author-text">Paul Hyunbin Cho</a>
+                <span class="author-divider">·</span>
+                <a href="https://nam-jisu.github.io/" target="_blank" class="author-text">Jisu Nam</a>
+                <span class="author-divider">·</span>
+                <a href="https://yoon-heez.github.io/" target="_blank" class="author-text">Heeji Yoon</a>
+                <span class="author-divider">·</span>
+                <a href="https://cvlab.kaist.ac.kr/" target="_blank" class="author-text">Seungryong Kim</a>
             </div>
 
             <div class="base-row author-row">
@@ -164,18 +143,12 @@
 
     <main class="main-content">
         <div class="container">
-            <div class="tldr">
-                <b>TL;DR</b>: Deep Forcing amplifies Self-Forcing’s emergent deep sink and performs training-free KV cache compression, stabilizing long-horizon video diffusion while preserving dynamic, high-fidelity visuals far beyond the base model’s context.
-            </div>
-
             <div id="Teaser" class="base-row section">
                 <h2>Teaser</h2>
-                <p class="paragraph">
-                    <strong>Deep Forcing</strong> is a training-free framework that enables stable long-video generation in autoregressive video diffusion models. By combining <strong>Deep Sink</strong>—which maintains global temporal coherence through persistent, phase-aligned sink tokens—with <strong>Participative Compression</strong>—which selectively retains only contextually relevant tokens while pruning redundant history—Deep Forcing achieves <strong>more than 12× length extrapolation</strong> (5s → 60s+) without fine-tuning. This approach delivers superior imaging and aesthetic quality compared to training-based methods while preserving temporal consistency and real-time streaming capability.                </p>
             </div>
 
             <div class="mini-tldr">
-                    <strong>Generated with a single prompt, no speed-up, no recaching.</strong>
+                <p><strong>All videos generated with a single prompt, no speed-up, no recaching.</strong></p>
             </div>
 
             <div class="image-container">
@@ -190,11 +163,12 @@
                         loop
                         muted
                         playsinline
+                        data-prompt="A stylish woman strolls down a bustling Tokyo street, the warm glow of neon lights and animated city signs casting vibrant reflections. She wears a sleek black leather jacket paired with a flowing red dress and black boots, her black purse slung over her shoulder. Sunglasses perched on her nose and a bold red lipstick add to her confident, casual demeanor. The street is damp and reflective, creating a mirror-like effect that enhances the colorful lights and shadows. Pedestrians move about, adding to the lively atmosphere. The scene is captured in a dynamic medium shot with the woman walking slightly to one side, highlighting her graceful strides."
                     ></video>
                     </div>
 
                     <div class="video-item">
-                    <div class="video-title">Ours(Training-Free)</div>
+                    <div class="video-title">Deep Forcing (<em>Training-Free</em>)</div>
                     <video
                         class="video-player"
                         src="videos/ours_city.mp4"
@@ -202,6 +176,7 @@
                         loop
                         muted
                         playsinline
+                        data-prompt="A stylish woman strolls down a bustling Tokyo street, the warm glow of neon lights and animated city signs casting vibrant reflections. She wears a sleek black leather jacket paired with a flowing red dress and black boots, her black purse slung over her shoulder. Sunglasses perched on her nose and a bold red lipstick add to her confident, casual demeanor. The street is damp and reflective, creating a mirror-like effect that enhances the colorful lights and shadows. Pedestrians move about, adding to the lively atmosphere. The scene is captured in a dynamic medium shot with the woman walking slightly to one side, highlighting her graceful strides."
                     ></video>
                     </div>
 
@@ -214,11 +189,12 @@
                         loop
                         muted
                         playsinline
+                        data-prompt="A vibrant and dynamic illustration in the style of a futuristic sci-fi comic, depicting two playful dogs, a Samoyed and a Golden Retriever, running through a neon-lit city at night. The dogs' fur gleams under the vibrant glow of the city's neon lights, casting colorful reflections. They move energetically, tails wagging, with the Samoyed having a fluffy white coat and the Golden Retriever sporting a golden one. The cityscape is filled with towering skyscrapers adorned with flickering neon signs, creating a mesmerizing visual spectacle. The background features blurred outlines of the city's architecture, with hints of glowing streets and distant buildings. The camera angle captures a medium shot of the dogs from a slightly elevated perspective, emphasizing their joyful movements."
                     ></video>
                     </div>
 
                     <div class="video-item">
-                    <div class="video-title">Ours(Training-Free)</div>
+                    <div class="video-title">Deep Forcing (<em>Training-Free</em>)</div>
                     <video
                         class="video-player"
                         src="videos/ours_dog.mp4"
@@ -226,6 +202,7 @@
                         loop
                         muted
                         playsinline
+                        data-prompt="A vibrant and dynamic illustration in the style of a futuristic sci-fi comic, depicting two playful dogs, a Samoyed and a Golden Retriever, running through a neon-lit city at night. The dogs' fur gleams under the vibrant glow of the city's neon lights, casting colorful reflections. They move energetically, tails wagging, with the Samoyed having a fluffy white coat and the Golden Retriever sporting a golden one. The cityscape is filled with towering skyscrapers adorned with flickering neon signs, creating a mesmerizing visual spectacle. The background features blurred outlines of the city's architecture, with hints of glowing streets and distant buildings. The camera angle captures a medium shot of the dogs from a slightly elevated perspective, emphasizing their joyful movements."
                     ></video>
                     </div>
 
@@ -244,7 +221,15 @@
                 </p>
             </div> -->
 
-            
+            <div class="tldr">
+                <b>TL;DR</b>: Deep Forcing amplifies Self-Forcing’s emergent deep sink and performs training-free KV cache compression, stabilizing long-horizon video diffusion while preserving dynamic, high-fidelity visuals far beyond the base model’s context.
+            </div>
+
+            <div class="base-row section">
+                <p class="explain">
+                    <strong>Deep Forcing</strong> is a training-free framework that enables stable long-video generation in autoregressive video diffusion models. By combining <strong>Deep Sink</strong>—which maintains global temporal coherence through persistent, phase-aligned sink tokens—with <strong>Participative Compression</strong>—which selectively retains only contextually relevant tokens while pruning redundant history—Deep Forcing achieves <strong>more than 12× length extrapolation</strong> (5s → 60s+) without fine-tuning. This approach delivers superior imaging and aesthetic quality compared to training-based methods while preserving temporal consistency and real-time streaming capability.
+                </p>
+            </div>
 
             <section id="Motivation" class="section">
                 <h2>Motivation</h2>
@@ -254,8 +239,14 @@
                     </div>
                 </div>
                 <div class="motivation-caption">
-                    <p> (a) baseline visual instruction tuning, (b) re-injecting visual features from the <i>post</i>-projection layer, (c) re-injecting from the <i>pre</i>-projection layer, and (d) the proposed visual representation alignment. </p>
-                    <p>(e) Layer-wise alignment between visual tokens in MLLMs and vision encoder features measured by CKNNA, with shaded regions highlighting middle layers that are especially important for visual understanding. (f) Benchmark performance corresponding to (a–d) </p>
+                    <!-- <p> (a) baseline visual instruction tuning, (b) re-injecting visual features from the <i>post</i>-projection layer, (c) re-injecting from the <i>pre</i>-projection layer, and (d) the proposed visual representation alignment. </p>
+                    <p>(e) Layer-wise alignment between visual tokens in MLLMs and vision encoder features measured by CKNNA, with shaded regions highlighting middle layers that are especially important for visual understanding. (f) Benchmark performance corresponding to (a–d) </p> -->
+                    <!-- <p><b>Deep Sink:</b> Video generation requires preserving deep historical context (40-60% of cache) rather than just initial frames. As Figure 4 shows, deeper sinks reduce aesthetic drift and improve consistency by maintaining intermediate frames as anchors. <b>Participative Compression:</b> Redundant tokens still accumulate, diluting attention and causing degeneration. PC prunes tokens with negligible attention while retaining contextually relevant ones, preventing error accumulation.</p> -->
+                    <p><b>Deep Sink:</b> Video generation requires preserving deep historical context (40-60% of cache) rather than just initial frames. As Figure shows, deeper sinks reduce aesthetic drift and improve consistency by maintaining intermediate frames as anchors.</p>
+
+                    <p><b>Participative Compression:</b> Redundant tokens still accumulate, diluting attention and causing degeneration. PC prunes tokens with negligible attention while retaining contextually relevant ones, preventing error accumulation.</p>
+
+                    <!-- <p>(a) Attention analysis revealing distributed patterns across the cache. (b) Token importance scoring and Top-C selection. (c) Competitive performance with training-based approaches despite being training-free.</p> -->
                 </div>
 <!-- 
                 <h3>Do MLLMs undergo visual information loss?</h3>
@@ -278,13 +269,11 @@
                 </div>
                 <div class="methods-text">
                     <p>
-                    <h3>What should serve as the alignment target?</h3>
                     </p>
                     <p>
-                    While aligning multimodal models with their own encoder features preserves some visual cues, it is fundamentally constrained by the encoder’s representational capacity. To overcome this limitation, we leverage stronger vision foundation models (VFMs) as teachers, providing richer, vision-centric targets.
-                    </p>
+                   <strong><i>Deep Sink</i></strong> maintains a substantially enlarged attention sink (~50% of cache) to preserve important historical context, with temporal RoPE adjustment ensuring coherence between sink tokens and current frames. 
                     <p>
-                    Building on this insight, we introduce <strong><i>VIRAL</i></strong>, which aligns intermediate MLLM representations to features from pretrained VFMs, thereby preserving more informative visual semantics than those available from the input encoder alone.
+                    <strong><i>Participative Compression</i></strong>, which dynamically prunes redundant tokens by computing query-averaged attention scores from recent frames, retains only the top-C most contextually relevant tokens while evicting obsolete history.
                     </p>
                 </div>
             </section>
@@ -312,8 +301,8 @@
                             autoplay loop muted playsinline></video>
                     </div>
                     <div class="video-item">
-                        <div class="video-label">Pirat</div>
-                        <video class="video-player" src="videos/ours_pirat.mp4"
+                        <div class="video-label"></div>
+                        <video class="video-player" src="videos/ours_burger.mp4"
                             autoplay loop muted playsinline></video>
                     </div>
 
@@ -336,8 +325,8 @@
 
                     <!-- Row 3 -->
                     <div class="video-item">
-                        <div class="video-label">Animal Chase</div>
-                        <video class="video-player" src="videos/df_animal_1.mp4"
+                        <div class="video-label"></div>
+                        <video class="video-player" src="videos/ddd.mp4"
                             autoplay loop muted playsinline></video>
                     </div>
                     <div class="video-item">
@@ -353,8 +342,8 @@
 
                     <!-- Row 4 -->
                     <div class="video-item">
-                        <div class="video-label">Crowd Scene</div>
-                        <video class="video-player" src="videos/df_crowd_1.mp4"
+                        <div class="video-label">Dogs</div>
+                        <video class="video-player" src="videos/ours_60s/ours_doggy.mp4"
                             autoplay loop muted playsinline></video>
                     </div>
                     <div class="video-item">
@@ -383,89 +372,121 @@
                         <div class="comparison-slide active">
                             <div class="video-item">
                                 <div class="video-label">Deep Forcing (Ours)</div>
-                                <video class="video-player" src="videos/sf_city.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/ours_60s/ours_journey.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A movie trailer in a classic cinematic style, featuring the adventurous journey of a 30-year-old space man wearing a vibrant red wool knitted motorcycle helmet. The scene unfolds against a vast blue sky and a desolate salt desert landscape. Shot on 35mm film, the trailer showcases vivid and rich colors, capturing the hero as he navigates through the harsh terrain with determination. His helmet glints under the sun, adding to the dramatic effect. The background is a mix of sweeping desert vistas and distant horizons, with the occasional shimmer of light reflecting off the salt flats. A dynamic medium shot with a sweeping overhead angle, emphasizing the hero's resilience and the vastness of his adventure."
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Self Forcing</div>
-                                <video class="video-player" src="videos/df_city_cmp.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/self_journey.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A movie trailer in a classic cinematic style, featuring the adventurous journey of a 30-year-old space man wearing a vibrant red wool knitted motorcycle helmet. The scene unfolds against a vast blue sky and a desolate salt desert landscape. Shot on 35mm film, the trailer showcases vivid and rich colors, capturing the hero as he navigates through the harsh terrain with determination. His helmet glints under the sun, adding to the dramatic effect. The background is a mix of sweeping desert vistas and distant horizons, with the occasional shimmer of light reflecting off the salt flats. A dynamic medium shot with a sweeping overhead angle, emphasizing the hero's resilience and the vastness of his adventure."
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Rolling Forcing</div>
-                                <video class="video-player" src="videos/ir_city.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/roll_journey.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A movie trailer in a classic cinematic style, featuring the adventurous journey of a 30-year-old space man wearing a vibrant red wool knitted motorcycle helmet. The scene unfolds against a vast blue sky and a desolate salt desert landscape. Shot on 35mm film, the trailer showcases vivid and rich colors, capturing the hero as he navigates through the harsh terrain with determination. His helmet glints under the sun, adding to the dramatic effect. The background is a mix of sweeping desert vistas and distant horizons, with the occasional shimmer of light reflecting off the salt flats. A dynamic medium shot with a sweeping overhead angle, emphasizing the hero's resilience and the vastness of his adventure."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">LongLive</div>
-                                <video class="video-player" src="videos/cv_city.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/long_journey.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A movie trailer in a classic cinematic style, featuring the adventurous journey of a 30-year-old space man wearing a vibrant red wool knitted motorcycle helmet. The scene unfolds against a vast blue sky and a desolate salt desert landscape. Shot on 35mm film, the trailer showcases vivid and rich colors, capturing the hero as he navigates through the harsh terrain with determination. His helmet glints under the sun, adding to the dramatic effect. The background is a mix of sweeping desert vistas and distant horizons, with the occasional shimmer of light reflecting off the salt flats. A dynamic medium shot with a sweeping overhead angle, emphasizing the hero's resilience and the vastness of his adventure."                                   
+                                    ></video>
                             </div>
                         </div>
                         <div class="comparison-slide">
                             <div class="video-item">
                                 <div class="video-label">Deep Forcing (Ours)</div>
-                                <video class="video-player" src="videos/df_forest_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/ours_60s/ours_train.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A subtle and elegant photograph in a Japanese style, capturing a woman with gentle, contemplative eyes and flowing dark hair sitting by the window of a high-speed train. The train moves rapidly through a bustling cityscape, with blurred reflections of the city lights and buildings on the window pane. The woman appears serene, her hands resting gently on her lap. The background features a blend of traditional Japanese architecture and modern skyscrapers, with a soft, muted color palette. The photo has a vintage film texture, emphasizing the movement and energy of the scene. A medium shot from a slightly angled perspective, highlighting the woman's thoughtful gaze and the dynamic motion of the train."
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Self Forcing</div>
-                                <video class="video-player" src="videos/df_multi_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/self_train.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A subtle and elegant photograph in a Japanese style, capturing a woman with gentle, contemplative eyes and flowing dark hair sitting by the window of a high-speed train. The train moves rapidly through a bustling cityscape, with blurred reflections of the city lights and buildings on the window pane. The woman appears serene, her hands resting gently on her lap. The background features a blend of traditional Japanese architecture and modern skyscrapers, with a soft, muted color palette. The photo has a vintage film texture, emphasizing the movement and energy of the scene. A medium shot from a slightly angled perspective, highlighting the woman's thoughtful gaze and the dynamic motion of the train."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Rolling Forcing</div>
-                                <video class="video-player" src="videos/df_multi_2.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/roll_train.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A subtle and elegant photograph in a Japanese style, capturing a woman with gentle, contemplative eyes and flowing dark hair sitting by the window of a high-speed train. The train moves rapidly through a bustling cityscape, with blurred reflections of the city lights and buildings on the window pane. The woman appears serene, her hands resting gently on her lap. The background features a blend of traditional Japanese architecture and modern skyscrapers, with a soft, muted color palette. The photo has a vintage film texture, emphasizing the movement and energy of the scene. A medium shot from a slightly angled perspective, highlighting the woman's thoughtful gaze and the dynamic motion of the train."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">LongLive</div>
-                                <video class="video-player" src="videos/df_multi_2.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/60s/long_train.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A subtle and elegant photograph in a Japanese style, capturing a woman with gentle, contemplative eyes and flowing dark hair sitting by the window of a high-speed train. The train moves rapidly through a bustling cityscape, with blurred reflections of the city lights and buildings on the window pane. The woman appears serene, her hands resting gently on her lap. The background features a blend of traditional Japanese architecture and modern skyscrapers, with a soft, muted color palette. The photo has a vintage film texture, emphasizing the movement and energy of the scene. A medium shot from a slightly angled perspective, highlighting the woman's thoughtful gaze and the dynamic motion of the train."                                    
+                                    ></video>
                             </div>
                         </div>
                         <div class="comparison-slide">
                             <div class="video-item">
                                 <div class="video-label">Deep Forcing (Ours)</div>
-                                <video class="video-player" src="videos/df_animal_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/ours_cloud.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic, epic fantasy-style illustration depicting a towering, giant cloud shaped like a man, with thunderous lightning bolts emanating from his outstretched arms and striking the ground below. The cloud-man has a fierce, determined expression, with stormy gray clouds cascading down his form, giving him a menacing presence. His eyes glow with an intense, electric blue light, and his arms are spread wide, ready to unleash more bolts. The background shows a dark, stormy sky with heavy rain and distant lightning, creating a foreboding atmosphere. The scene is rendered in a dynamic, high-detailed style with a mix of realistic and fantastical elements. A high-angle shot capturing the full figure of the cloud-man in action."
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Self Forcing</div>
-                                <video class="video-player" src="videos/df_indoor_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/self_cloud.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic, epic fantasy-style illustration depicting a towering, giant cloud shaped like a man, with thunderous lightning bolts emanating from his outstretched arms and striking the ground below. The cloud-man has a fierce, determined expression, with stormy gray clouds cascading down his form, giving him a menacing presence. His eyes glow with an intense, electric blue light, and his arms are spread wide, ready to unleash more bolts. The background shows a dark, stormy sky with heavy rain and distant lightning, creating a foreboding atmosphere. The scene is rendered in a dynamic, high-detailed style with a mix of realistic and fantastical elements. A high-angle shot capturing the full figure of the cloud-man in action."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Rolling Forcing</div>
-                                <video class="video-player" src="videos/df_aerial_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/roll_cloud.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic, epic fantasy-style illustration depicting a towering, giant cloud shaped like a man, with thunderous lightning bolts emanating from his outstretched arms and striking the ground below. The cloud-man has a fierce, determined expression, with stormy gray clouds cascading down his form, giving him a menacing presence. His eyes glow with an intense, electric blue light, and his arms are spread wide, ready to unleash more bolts. The background shows a dark, stormy sky with heavy rain and distant lightning, creating a foreboding atmosphere. The scene is rendered in a dynamic, high-detailed style with a mix of realistic and fantastical elements. A high-angle shot capturing the full figure of the cloud-man in action."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">LongLive</div>
-                                <video class="video-player" src="videos/df_aerial_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/long_cloud.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic, epic fantasy-style illustration depicting a towering, giant cloud shaped like a man, with thunderous lightning bolts emanating from his outstretched arms and striking the ground below. The cloud-man has a fierce, determined expression, with stormy gray clouds cascading down his form, giving him a menacing presence. His eyes glow with an intense, electric blue light, and his arms are spread wide, ready to unleash more bolts. The background shows a dark, stormy sky with heavy rain and distant lightning, creating a foreboding atmosphere. The scene is rendered in a dynamic, high-detailed style with a mix of realistic and fantastical elements. A high-angle shot capturing the full figure of the cloud-man in action."
+                                    ></video>
                             </div>
                         </div>
                         <div class="comparison-slide">
                             <div class="video-item">
                                 <div class="video-label">Deep Forcing (Ours)</div>
-                                <video class="video-player" src="videos/df_crowd_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/ours_tsunami.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic and dynamic scene in the style of a disaster movie, depicting a powerful tsunami rushing through a narrow alley in Bulgaria. The water is turbulent and chaotic, with waves crashing violently against the walls and buildings on either side. The alley is lined with old, weathered houses, their facades partially submerged and splintered. The camera angle is low, capturing the full force of the tsunami as it surges forward, creating a sense of urgency and danger. People can be seen running frantically, adding to the chaos. The background features a distant horizon, hinting at the larger scale of the tsunami. A dynamic, sweeping shot from a low-angle perspective, emphasizing the movement and intensity of the event."
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Self Forcing</div>
-                                <video class="video-player" src="videos/df_longhaul_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/self_tsunami.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic and dynamic scene in the style of a disaster movie, depicting a powerful tsunami rushing through a narrow alley in Bulgaria. The water is turbulent and chaotic, with waves crashing violently against the walls and buildings on either side. The alley is lined with old, weathered houses, their facades partially submerged and splintered. The camera angle is low, capturing the full force of the tsunami as it surges forward, creating a sense of urgency and danger. People can be seen running frantically, adding to the chaos. The background features a distant horizon, hinting at the larger scale of the tsunami. A dynamic, sweeping shot from a low-angle perspective, emphasizing the movement and intensity of the event."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">Rolling Forcing</div>
-                                <video class="video-player" src="videos/df_extra_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/roll_tsunami.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic and dynamic scene in the style of a disaster movie, depicting a powerful tsunami rushing through a narrow alley in Bulgaria. The water is turbulent and chaotic, with waves crashing violently against the walls and buildings on either side. The alley is lined with old, weathered houses, their facades partially submerged and splintered. The camera angle is low, capturing the full force of the tsunami as it surges forward, creating a sense of urgency and danger. People can be seen running frantically, adding to the chaos. The background features a distant horizon, hinting at the larger scale of the tsunami. A dynamic, sweeping shot from a low-angle perspective, emphasizing the movement and intensity of the event."                                    
+                                    ></video>
                             </div>
                             <div class="video-item">
                                 <div class="video-label">LongLive</div>
-                                <video class="video-player" src="videos/df_extra_1.mp4"
-                                    autoplay loop muted playsinline></video>
+                                <video class="video-player" src="videos/long_tsunami.mp4"
+                                    autoplay loop muted playsinline
+                                    data-prompt="A dramatic and dynamic scene in the style of a disaster movie, depicting a powerful tsunami rushing through a narrow alley in Bulgaria. The water is turbulent and chaotic, with waves crashing violently against the walls and buildings on either side. The alley is lined with old, weathered houses, their facades partially submerged and splintered. The camera angle is low, capturing the full force of the tsunami as it surges forward, creating a sense of urgency and danger. People can be seen running frantically, adding to the chaos. The background features a distant horizon, hinting at the larger scale of the tsunami. A dynamic, sweeping shot from a low-angle perspective, emphasizing the movement and intensity of the event."                                    
+                                    ></video>
                             </div>
                         </div>
                     </div>
@@ -481,27 +502,39 @@
                 <div class="video-grid-3x2">
                     <div class="video-item">
                         <div class="video-label">Sink Size 0</div>
-                        <video class="video-player" src="videos/sink_04.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/0_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Sink Size 4</div>
-                        <video class="video-player" src="videos/sink_08.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/4_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."                        
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Sink Size 9</div>
-                        <video class="video-player" src="videos/sink_12.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/9_sink.mp4" autoplay loop muted playsinline
+                            data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."                    
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Sink Size 12</div>
-                        <video class="video-player" src="videos/sink_16.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/12_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."                        
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Sink Size 14</div>
-                        <video class="video-player" src="videos/sink_20.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/14_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."                        
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Sink Size 18</div>
-                        <video class="video-player" src="videos/sink_24.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/18_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="A dynamic shot from behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by towering redwood trees on a rugged mountain slope. Dust kicks up from its tires, and the sunlight shines on the SUV, casting a warm glow over the scene. The dirt road curves gently into the distance, with no other vehicles in sight. The trees on either side are dense redwoods, with patches of greenery scattered throughout. The car navigates the curve with ease, making it seem as if it is on a thrilling drive through the rugged terrain. The dirt road is framed by steep hills and mountains, with a clear blue sky above and wispy clouds drifting by. The camera captures the vehicle from the rear, emphasizing its powerful and adventurous journey."                        
+                        ></video>
                     </div>
                 </div>
 
@@ -509,15 +542,21 @@
                 <div class="video-grid-3x1">
                     <div class="video-item">
                         <div class="video-label">Baseline</div>
-                        <video class="video-player" src="videos/baseline_plain.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/abl_30s/SF_pirate.mp4" autoplay loop muted playsinline
+                        data-prompt="A photorealistic closeup video of two pirate ships battling each other as they sail inside a steaming cup of coffee. The ships are intricately detailed, with wooden planks, sails flapping in the breeze, and cannons aimed at each other. The crew members, wearing authentic pirate attire, brandish swords and pistols, their expressions fierce and determined. The coffee foam creates a frothy, turbulent sea, with ripples and waves realistically depicted. The background is a blurred, warm brown coffee surface, with steam rising gently. The camera angle is slightly elevated, capturing the intense action from above."
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Baseline + Deep Sink</div>
-                        <video class="video-player" src="videos/baseline_ds.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/sinks/abl_30s/SF_DS_pirate.mp4" autoplay loop muted playsinline
+                        data-prompt="A photorealistic closeup video of two pirate ships battling each other as they sail inside a steaming cup of coffee. The ships are intricately detailed, with wooden planks, sails flapping in the breeze, and cannons aimed at each other. The crew members, wearing authentic pirate attire, brandish swords and pistols, their expressions fierce and determined. The coffee foam creates a frothy, turbulent sea, with ripples and waves realistically depicted. The background is a blurred, warm brown coffee surface, with steam rising gently. The camera angle is slightly elevated, capturing the intense action from above."                   
+                        ></video>
                     </div>
                     <div class="video-item">
                         <div class="video-label">Baseline + DS + PC</div>
-                        <video class="video-player" src="videos/baseline_ds_pc.mp4" autoplay loop muted playsinline></video>
+                        <video class="video-player" src="videos/ours_pirat.mp4" autoplay loop muted playsinline
+                        data-prompt="A photorealistic closeup video of two pirate ships battling each other as they sail inside a steaming cup of coffee. The ships are intricately detailed, with wooden planks, sails flapping in the breeze, and cannons aimed at each other. The crew members, wearing authentic pirate attire, brandish swords and pistols, their expressions fierce and determined. The coffee foam creates a frothy, turbulent sea, with ripples and waves realistically depicted. The background is a blurred, warm brown coffee surface, with steam rising gently. The camera angle is slightly elevated, capturing the intense action from above."                        
+                        ></video>
                     </div>
                 </div>
             </section>
@@ -527,8 +566,7 @@
             <section id="conclusion" class="section">
                 <h2>Conclusion</h2>
 
-                <p>In this work, we propose VIRAL, a simple yet effective training strategy that aligns the internal visual representations of MLLMs with those from powerful vision foundation models. Our approach preserves fine-grained visual semantics often discarded under text-only supervision, enabling more accurate spatial reasoning and object grounding. Extensive experiments across diverse benchmarks validate the effectiveness and generality of our method, demonstrating that visual representation alignment significantly enhances both performance and training efficiency in multimodal learning.</p>
-            </section>
+                <p>In this work, we propose Deep Forcing, a training-free approach that mitigates error accumulation in autoregressive long video generation through two key mechanisms: Deep Sink and Participative Compression. By exploiting the inherent deep attention sink behavior in pre-trained models, our method enables stable minute-long video generation while preserving visual fidelity and motion dynamics. Extensive experiments across VBench-Long, user studies, and VLM evaluation demonstrate that our training-free paradigm achieves strong performance competitive with training-based methods, offering a practical and efficient solution for long-form autoregressive video diffusion. </p>
 
             <div class="citation add-top-padding">
                 <h1 id="citation">Citation</h1>
@@ -646,6 +684,45 @@
             }
         });
 
+        // Prompt modal
+        const promptModal = document.createElement('div');
+        promptModal.className = 'prompt-modal';
+        promptModal.innerHTML = `
+            <div class="prompt-modal-card">
+                <button type="button" class="prompt-modal-close" aria-label="Close prompt">
+                    <i class="fa fa-times"></i>
+                </button>
+                <div class="prompt-modal-body">
+                    <h4>Prompt</h4>
+                    <p class="prompt-text"></p>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(promptModal);
+        const promptTextNode = promptModal.querySelector('.prompt-text');
+
+        function openPromptModal(text) {
+            promptTextNode.textContent = text || 'Prompt coming soon.';
+            promptModal.classList.add('active');
+            document.body.classList.add('no-scroll');
+        }
+
+        function closePromptModal() {
+            promptModal.classList.remove('active');
+            document.body.classList.remove('no-scroll');
+        }
+
+        promptModal.addEventListener('click', (event) => {
+            if (event.target === promptModal || event.target.closest('.prompt-modal-close')) {
+                closePromptModal();
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && promptModal.classList.contains('active')) {
+                closePromptModal();
+            }
+        });
+
         // Enable tap-to-toggle controls for showcase videos
         document.querySelectorAll('.video-player').forEach(video => {
             const wrapper = video.closest('.video-item') || video.parentElement;
@@ -677,6 +754,12 @@
             expandButton.type = 'button';
             expandButton.className = 'video-control-btn expand';
             expandButton.innerHTML = '<i class="fa fa-expand"></i>';
+
+            const promptButton = document.createElement('button');
+            promptButton.type = 'button';
+            promptButton.className = 'video-prompt-btn';
+            promptButton.innerHTML = '<i class="fa fa-align-left"></i> Prompt';
+            wrapper.appendChild(promptButton);
 
             controls.appendChild(playButton);
             controls.appendChild(timeLabel);
@@ -732,6 +815,11 @@
             expandButton.addEventListener('click', (event) => {
                 event.stopPropagation();
                 openVideoLightbox(video);
+            });
+
+            promptButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                openPromptModal(video.dataset.prompt);
             });
 
             video.addEventListener('play', () => {
