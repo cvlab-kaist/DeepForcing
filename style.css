@@ -335,8 +335,38 @@ p {
 }
 
 .motivation-figure .img.large-image {
-  max-width: 65%;
+  max-width: 70%;
   margin: 0.5rem auto 1rem;
+}
+
+.motivation-two-col {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.motivation-two-col .image-content {
+  flex: 1;
+}
+
+.motivation-two-col .image-content.motivation-primary {
+  flex: 1.5;
+}
+
+.motivation-two-col .image-content.motivation-secondary {
+  flex: 1;
+}
+
+.motivation-two-col .img.medium-image {
+  width: 100%;
+  max-width: 100%;
+  margin: 0.5rem auto 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .motivation-two-col {
+    flex-direction: column;
+  }
 }
 
 .motivation-caption {
