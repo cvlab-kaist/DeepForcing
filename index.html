@@ -4,10 +4,6 @@
     <meta charset="utf-8" />
     <title>Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression</title>
 
-    <!-- Favicon references 
-    <link rel="icon" type="image/png" href="./images/viral_robot.png">
-    <link rel="apple-touch-icon" href="./images/viral_robot.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
 
     <meta
         content="Deep Forcing: Training-Free Long Video Generation with Deep Sink and Participative Compression"
@@ -92,9 +88,6 @@
         <div class="container">
             <div class="title-row">
                 <div class="title-flex">
-                    <!--<video class="title-video" autoplay muted loop playsinline>
-                        <source src="images/robot_alpha.webm" type="video/webm">
-                        <source src="images/moving viral.mp4" type="video/mp4"> -->
                     </video>
                     <div class="title-text-block">
                         <h1 class="title"><span class="gradient-text">Deep Forcing</span>: Training-Free Long Video Generation<span class="title-break"></span> with Deep Sink and Participative Compression</h1>
@@ -208,18 +201,7 @@
 
                 </div>
 
-                <!-- 필요하면 아래 캡션을 살려 써도 됨 -->
             </div>
-            <!-- <div>
-                <p>
-                    <img class="paragraph-image" src="images/virabot_head.png" alt="VIRAL robot" />
-                    VIRAL introduces an auxiliary regularization objective on the visual pathway to prevent MLLMs from discarding detailed attributes during training. 
-                </p>
-                <p>
-                    <img class="paragraph-image" src="images/virabot_head.png" alt="VIRAL robot" />
-                    VIRAL, when trained with DINOv2 as the vision foundation model (VFM), consistently produces more accurate visually grounded responses and achieves substantial improvements over standard baselines across diverse vision encoders, including CLIP and SigLIPv2!
-                </p>
-            </div> -->
 
             <div class="tldr">
                 <b>TL;DR</b>: Deep Forcing amplifies Self Forcing's emergent deep sink and performs training-free KV cache compression, mitigating quality degradation in long-horizon video diffusion while preserving dynamic, high-fidelity visuals far beyond the base model's context.
@@ -243,25 +225,11 @@
                     </div>
                 </div>
                 <div class="motivation-caption">
-                    <!-- <p> (a) baseline visual instruction tuning, (b) re-injecting visual features from the <i>post</i>-projection layer, (c) re-injecting from the <i>pre</i>-projection layer, and (d) the proposed visual representation alignment. </p>
-                    <p>(e) Layer-wise alignment between visual tokens in MLLMs and vision encoder features measured by CKNNA, with shaded regions highlighting middle layers that are especially important for visual understanding. (f) Benchmark performance corresponding to (a–d) </p> -->
-                    <!-- <p><b>Deep Sink:</b> Video generation requires preserving deep historical context (40-60% of cache) rather than just initial frames. As Figure 4 shows, deeper sinks reduce aesthetic drift and improve consistency by maintaining intermediate frames as anchors. <b>Participative Compression:</b> Redundant tokens still accumulate, diluting attention and causing degeneration. PC prunes tokens with negligible attention while retaining contextually relevant ones, preventing error accumulation.</p> -->
                     <p><b>Deep Sink:</b> Our analysis reveals attention distributes across both early and intermediate frames—unlike LLM sinks preserving only few initial tokens—requiring deep sink preservation (40-60%) to maintain fidelity beyond training length.</p>
 
                     <p><b>Participative Compression:</b> To prevent quality degeneration from attention dilution caused by error accumulation during extreme out-of-distribution long-context extrapolation.</p>
-
-                    <!-- <p>(a) Attention analysis revealing distributed patterns across the cache. (b) Token importance scoring and Top-C selection. (c) Competitive performance with training-based approaches despite being training-free.</p> -->
                 </div>
-<!-- 
-                <h3>Do MLLMs undergo visual information loss?</h3>
-                <p>MLLMs are trained with text-only supervision, causing their visual features to drift from the encoder’s rich representations.
-                    We measure this with CKNNA and observe a sharp drop in similarity to CLIP features across layers.</p>
-                <h3>Is preserving visual information beneficial?</h3>
-                <p>Motivated by the observation that internal visual representations of MLLMs diverge from the encoder’s original features, we ask whether re-injecting them could help. We add a residual connection that feeds the input visual features of the language model back into its mid-layers. This preserves alignment with the encoder and yields consistent performance gains on multimodal benchmarks.</p>
-                <h3>Can we compensate visual information with raw vision encoder feature?</h3>
-                <p>We first tested re-injecting raw vision encoder features into mid-layers via a residual branch, but this degraded performance as the features were not language-aligned and disrupted intermediate representations. 
-                To address this, we introduce a more principled strategy by explicitly aligning intermediate visual representations with frozen encoder features through a Visual Representation Alignment (VRA) loss. <p>This approach yields general improvements, though limitations remain: <strong> <i>encoder features can also transmit their inherent biases</i></strong>, as observed in MMVP.</p> -->
-            </section>
+          </section>
 
             <section id="Methods" class="section">
                 <h2>Deep Forcing</h2>
@@ -269,7 +237,6 @@
                     <div class="image-content">
                         <img src="images/main_figure.png" class="image-item img large-image z-depth-1" alt="VIRAL framework illustration">
                     </div>
-                    <!-- <p class="image-caption">Building upon our findings in visual representation alignment, we align visual pathway representation from MLLMs to strong, informative representations from VFMs to improve the vision understanding performance of MLLMs. </p> -->
                 </div>
                 <div class="methods-text">
                     <p>
@@ -365,10 +332,10 @@
                             data-prompt="A high-speed video capturing the dynamic interaction between raindrops and a puddle, showcasing the ripples and splashes in vivid detail. Each raindrop hits the surface with force, creating a series of concentric ripples that spread outwards and merge into larger waves. The water splashes upward, dispersing droplets in all directions. The background is a blurred urban setting with tall buildings and streetlights reflecting off the wet pavement. The video has a smooth, cinematic quality with clear, fast-moving visuals. A close-up shot from a low angle, emphasizing the kinetic energy of the raindrops."></video>
                     </div>
                     <div class="video-item">
-                        <div class="video-label">Running Pig</div>
-                        <video class="video-player" src="videos/ours_60s/ours_pig.mp4"
+                        <div class="video-label">Fluffy Monster</div>
+                        <video class="video-player" src="videos/ours_60s/ours_monster.mp4"
                             autoplay loop muted playsinline
-                            data-prompt="A vibrant anime illustration in a dynamic motion style of a pink pig running rapidly towards the camera in a narrow alley in Tokyo. The pig has large, round eyes and a playful expression, with its ears perked up and body slightly hunched forward. It is wearing a small, pink bow tie, adding a cute touch to its appearance. The background showcases the bustling Tokyo alley, with colorful signs and neon lights reflecting off the wet pavement. The scene is captured from a low-angle perspective, emphasizing the pig's energetic movement."></video>
+                            data-prompt="A close-up 3D animated scene of a short, fluffy monster kneeling beside a melting red candle. The monster has large, wide eyes and an open mouth, gazing at the flame with a look of wonder and curiosity. Its soft, fluffy fur contrasts with the warm, dramatic lighting that highlights every detail of its gentle, innocent expression. The pose conveys a sense of playfulness and exploration, as if the creature is discovering the world for the first time. The background features a cozy, warmly lit room with subtle hints of a fireplace and soft furnishings, enhancing the overall atmosphere. The use of warm colors and dramatic lighting creates a captivating and inviting scene."></video>
                     </div>
                 </div>
 
