@@ -228,6 +228,20 @@ p {
   color: var(--primary-color);
 }
 
+.new-notice {
+  background: linear-gradient(135deg, #6f63d8, #4aa3d8);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.05rem;
+  box-shadow: 0 10px 25px rgba(79, 94, 200, 0.25);
+}
+
+.new-notice strong {
+  font-weight: 700;
+}
+
 .mini-tldr {
   background-color: #f5f7ff;
   border-left: 4px solid var(--accent-color);
@@ -550,6 +564,9 @@ pre {
   font-size: 1.1rem;
   transition: color 0.3s ease;
   position: relative;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .nav-links a:after {
@@ -1600,6 +1617,10 @@ pre {
   grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3열 */
   gap: 16px;
   margin-top: 16px;
+}
+
+.subsection-grid {
+  margin-bottom: 2rem;
 }
 
 .video-grid-3x2 {

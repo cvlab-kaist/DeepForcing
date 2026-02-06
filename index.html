@@ -75,10 +75,13 @@
                     <li><a href="#Teaser">Teaser</a></li>
                     <li><a href="#Motivation">Motivation</a></li>
                     <li><a href="#Methods">Methods</a></li>
-                    <li><a href="#visual-representation-alignment">Qualitative Results</a></li>
+                    <li><a href="#visual-representation-alignment">Qualitative</li>
                     <li><a href="#comparison">Comparison</a></li>
                     <li><a href="#ablation-studies">Ablation</a></li>
-                    <li><a href="#citation">Citation</a></li>
+                    <li><a href="#interactive-prompting">Interactive</a></li>
+                    <li><a href="#world-model">World Models</a></li>
+                    <li><a href="#causal-forcing">Causal Forcing</a></li>
+                    <!-- <li><a href="#citation">Citation</a></li> -->
                 </ul>
             </nav>
         </div>
@@ -136,16 +139,20 @@
 
     <main class="main-content">
         <div class="container">
+            <div class="new-notice">
+                <strong>New!</strong> Check out Deep Forcing on Interactive Prompting, World Models &amp; Causal Forcing!
+            </div>
+            <div> </div>
             <div id="Teaser" class="base-row section">
                 <h2>Teaser</h2>
             </div>
 
             <div class="mini-tldr">
-                <p><strong>All videos were generated from a single prompt, with no re-caching, and are shown at 1× speed.</strong></p>
+                <p><strong>All videos, except <b>'Interactive Prompting' & 'World Models'</b>, were generated from a single prompt, with no re-caching, and are shown at 1× speed.</strong></p>
             </div>
 
             <div class="image-container">
-                <div class="video-grid">
+                <div class="video-grid subsection-grid">
 
                     <div class="video-item">
                     <div class="video-title">Rolling Forcing</div>
@@ -201,10 +208,6 @@
 
                 </div>
 
-            </div>
-
-            <div class="tldr">
-                <b>TL;DR</b>: Deep Forcing amplifies Self Forcing's emergent deep sink and performs training-free KV cache compression, mitigating quality degradation in long-horizon video diffusion while preserving dynamic, high-fidelity visuals far beyond the base model's context.
             </div>
 
             <div class="base-row section">
@@ -538,6 +541,134 @@
                         <video class="video-player" src="videos/ours_pirat.mp4" autoplay loop muted playsinline
                         data-prompt="A photorealistic closeup video of two pirate ships battling each other as they sail inside a steaming cup of coffee. The ships are intricately detailed, with wooden planks, sails flapping in the breeze, and cannons aimed at each other. The crew members, wearing authentic pirate attire, brandish swords and pistols, their expressions fierce and determined. The coffee foam creates a frothy, turbulent sea, with ripples and waves realistically depicted. The background is a blurred, warm brown coffee surface, with steam rising gently. The camera angle is slightly elevated, capturing the intense action from above."                        
                         ></video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="interactive-prompting" class="section">
+                <h2>Interactive Prompting</h2>
+                <p class="paragraph">
+                    Deep Forcing enables users to modify prompts during streaming to interactively generate video in real time. Input prompts can be viewed via the "Prompt" button in the video.
+                </p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">Casino</div>
+                        <video class="video-player" src="videos/casino_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A realistic video of a Texas Hold'em poker event at a casino. A male player in his late 30s with a medium build, short dark hair, light stubble, and a sharp jawline wears a fitted navy blazer over a charcoal crew-neck tee, dark jeans, and a stainless-steel watch. He sits at a well-lit poker table and tightly grips his hole cards, wearing a tense, serious expression. The table is filled with chips of various colors, the dealer is seen dealing cards, and several rows of slot machines glow in the background. The camera focuses on the player's strained concentration. Wide shot to medium close-up.&#10;&#10;10~20s: A realistic video of a Texas Hold'em poker event at a casino. The same male player - late 30s, medium build, short dark hair, light stubble, sharp jawline - dressed in a fitted navy blazer over a charcoal tee, dark jeans, and a stainless-steel watch - flicks his cards onto the felt, then leans back in the chair with arms spread wide in celebration. The dealer continues dealing to the table as stacks of multicolored chips crowd the surface; slot machines and nearby patrons fill the background. The camera locks onto the player's exuberant reaction. Wide shot to medium close-up.&#10;&#10;20~30s: A realistic video of a Texas Hold'em poker event at a casino. The same late-30s male player, medium build with short dark hair and light stubble, wearing a navy blazer, charcoal tee, dark jeans, and a stainless-steel watch, reveals the winning hand and leans back in celebration while the dealer keeps the game moving. A nearby patron claps and cheers for the winner, amplifying the festive atmosphere. The table brims with colorful chips, with slot machines and other tables behind. The camera centers on the winner's reaction as the applause rises. Wide shot to medium close-up."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Detective</div>
+                        <video class="video-player" src="videos/detective_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, is standing in her dimly lit office late at night. She is wearing a dark charcoal grey blazer over a simple cream silk blouse. She stares at a large corkboard on the wall, which is covered with a complex web of photos, notes, and newspaper clippings connected by pieces of red string. A single desk lamp casts long shadows across the room, illuminating her thoughtful, determined expression.&#10;&#10;10~20s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, wearing a dark charcoal grey blazer over a simple cream silk blouse, is studying the case board. Her partner, a younger male detective in his early 30s with a slightly disheveled look, five o'clock shadow, and wearing a slightly rumpled white dress shirt with a loosened dark tie, enters the office. He is holding two steaming Styrofoam cups of coffee and a file folder. He has a tired but resolute look on his face, ready for another long night.&#10;&#10;20~30s: The camera zooms in on the corkboard, moving past the various photos and notes. It settles on a close-up of a single, black-and-white photograph of a key witness, their face etched with worry. A red string is pinned to the photo, leading out of the frame. The shot is grainy and moody, emphasizing the human element and the high stakes of the investigation. The detectives are not visible, only the fragmented clues of the complex puzzle they are trying to solve."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Presentation</div>
+                        <video class="video-player" src="videos/presentation_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A young executive in a sharp business suit is giving a presentation in a modern, glass-walled boardroom. She is pointing to a chart on a large screen. Her colleagues are watching attentively.&#10;&#10;10~20s: The young executive giving the presentation in the boardroom is interrupted when the company's charismatic CEO unexpectedly enters the room with a broad smile. All the colleagues turn to look.&#10;&#10;20~30s: The camera slowly zooms in on the presentation screen, moving past the sleek slide title and bullet points. It settles on a close-up of a rising line chart and a highlighted KPI box labeled 'Project Horizon,' with a bold, unexpected milestone date circled in red. A small laser-pointer dot hovers near the most critical point on the graph, and a few handwritten sticky-note annotations are attached to the screen's bezel. The shot is crisp, high-contrast, and corporate yet tense. No people are visible - no faces, hands, silhouettes, reflections, or shadows. The frame contains only the screen and the slide content against a clean, neutral background."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Calligrapher</div>
+                        <video class="video-player" src="videos/calligrapher_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: An elderly calligrapher with a long, thin beard is carefully painting a Japanese kanji character on a large sheet of rice paper in a serene, traditional dojo. The dojo has paper screens and tatami mats.&#10;&#10;10~20s: The elderly callighapher in the serene dojo is being watched by his young grandson, who is sitting quietly and respectfully a few feet away, observing the master's every move. The room is silent except for the brush on paper.&#10;&#10;20~30s: The elderly calligrapher and his young grandson are in the serene dojo. The master finishes his character and gestures for his grandson to come closer. He hands the boy a smaller brush. The large rice paper sits on the floor."></video>
+                    </div>
+                </div>
+            </section> -->
+            <section id="interactive-prompting" class="section">
+                <h2>Interactive Prompting</h2>
+                <p class="paragraph">
+                    Deep Forcing can be used with interactive prompting, where users modify prompts during streaming to interactively generate video in real time. Input prompts can be viewed via the "Prompt" button in the video.
+                </p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">LongLive (<em>Trained</em>)</div>
+                        <video class="video-player" src="videos/long_casino1.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A realistic video of a Texas Hold'em poker event at a casino. A male player in his late 30s with a medium build, short dark hair, light stubble, and a sharp jawline wears a fitted navy blazer over a charcoal crew-neck tee, dark jeans, and a stainless-steel watch. He sits at a well-lit poker table and tightly grips his hole cards, wearing a tense, serious expression. The table is filled with chips of various colors, the dealer is seen dealing cards, and several rows of slot machines glow in the background. The camera focuses on the player's strained concentration. Wide shot to medium close-up.&#10;&#10;10~20s: A realistic video of a Texas Hold'em poker event at a casino. The same male player - late 30s, medium build, short dark hair, light stubble, sharp jawline - dressed in a fitted navy blazer over a charcoal tee, dark jeans, and a stainless-steel watch - flicks his cards onto the felt, then leans back in the chair with arms spread wide in celebration. The dealer continues dealing to the table as stacks of multicolored chips crowd the surface; slot machines and nearby patrons fill the background. The camera locks onto the player's exuberant reaction. Wide shot to medium close-up.&#10;&#10;20~30s: A realistic video of a Texas Hold'em poker event at a casino. The same late-30s male player, medium build with short dark hair and light stubble, wearing a navy blazer, charcoal tee, dark jeans, and a stainless-steel watch, reveals the winning hand and leans back in celebration while the dealer keeps the game moving. A nearby patron claps and cheers for the winner, amplifying the festive atmosphere. The table brims with colorful chips, with slot machines and other tables behind. The camera centers on the winner's reaction as the applause rises. Wide shot to medium close-up."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Deep Forcing (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/casino_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A realistic video of a Texas Hold'em poker event at a casino. A male player in his late 30s with a medium build, short dark hair, light stubble, and a sharp jawline wears a fitted navy blazer over a charcoal crew-neck tee, dark jeans, and a stainless-steel watch. He sits at a well-lit poker table and tightly grips his hole cards, wearing a tense, serious expression. The table is filled with chips of various colors, the dealer is seen dealing cards, and several rows of slot machines glow in the background. The camera focuses on the player's strained concentration. Wide shot to medium close-up.&#10;&#10;10~20s: A realistic video of a Texas Hold'em poker event at a casino. The same male player - late 30s, medium build, short dark hair, light stubble, sharp jawline - dressed in a fitted navy blazer over a charcoal tee, dark jeans, and a stainless-steel watch - flicks his cards onto the felt, then leans back in the chair with arms spread wide in celebration. The dealer continues dealing to the table as stacks of multicolored chips crowd the surface; slot machines and nearby patrons fill the background. The camera locks onto the player's exuberant reaction. Wide shot to medium close-up.&#10;&#10;20~30s: A realistic video of a Texas Hold'em poker event at a casino. The same late-30s male player, medium build with short dark hair and light stubble, wearing a navy blazer, charcoal tee, dark jeans, and a stainless-steel watch, reveals the winning hand and leans back in celebration while the dealer keeps the game moving. A nearby patron claps and cheers for the winner, amplifying the festive atmosphere. The table brims with colorful chips, with slot machines and other tables behind. The camera centers on the winner's reaction as the applause rises. Wide shot to medium close-up."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">LongLive (<em>Trained</em>)</div>
+                        <video class="video-player" src="videos/long_detective.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, is standing in her dimly lit office late at night. She is wearing a dark charcoal grey blazer over a simple cream silk blouse. She stares at a large corkboard on the wall, which is covered with a complex web of photos, notes, and newspaper clippings connected by pieces of red string. A single desk lamp casts long shadows across the room, illuminating her thoughtful, determined expression.&#10;&#10;10~20s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, wearing a dark charcoal grey blazer over a simple cream silk blouse, is studying the case board. Her partner, a younger male detective in his early 30s with a slightly disheveled look, five o'clock shadow, and wearing a slightly rumpled white dress shirt with a loosened dark tie, enters the office. He is holding two steaming Styrofoam cups of coffee and a file folder. He has a tired but resolute look on his face, ready for another long night.&#10;&#10;20~30s: The camera zooms in on the corkboard, moving past the various photos and notes. It settles on a close-up of a single, black-and-white photograph of a key witness, their face etched with worry. A red string is pinned to the photo, leading out of the frame. The shot is grainy and moody, emphasizing the human element and the high stakes of the investigation. The detectives are not visible, only the fragmented clues of the complex puzzle they are trying to solve."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Deep Forcing (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/detective_global_sink.mp4" autoplay loop muted playsinline
+                        data-prompt="0~10s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, is standing in her dimly lit office late at night. She is wearing a dark charcoal grey blazer over a simple cream silk blouse. She stares at a large corkboard on the wall, which is covered with a complex web of photos, notes, and newspaper clippings connected by pieces of red string. A single desk lamp casts long shadows across the room, illuminating her thoughtful, determined expression.&#10;&#10;10~20s: A female detective in her 40s, with sharp, intelligent eyes and her brown hair cut in a practical, no-nonsense bob, wearing a dark charcoal grey blazer over a simple cream silk blouse, is studying the case board. Her partner, a younger male detective in his early 30s with a slightly disheveled look, five o'clock shadow, and wearing a slightly rumpled white dress shirt with a loosened dark tie, enters the office. He is holding two steaming Styrofoam cups of coffee and a file folder. He has a tired but resolute look on his face, ready for another long night.&#10;&#10;20~30s: The camera zooms in on the corkboard, moving past the various photos and notes. It settles on a close-up of a single, black-and-white photograph of a key witness, their face etched with worry. A red string is pinned to the photo, leading out of the frame. The shot is grainy and moody, emphasizing the human element and the high stakes of the investigation. The detectives are not visible, only the fragmented clues of the complex puzzle they are trying to solve."></video>
+                    </div>
+                </div>
+            </section>
+
+            <section id="world-model" class="section">
+                <h2>Application: World Models</h2>
+                <p class="paragraph">
+                    Our methods can be applied to world models such as Matrix-Game 2.0, mitigating error accumulation and color drift.
+                </p>
+                <h3>Dynamic Scene</h3>
+                <p>
+                    When action inputs (e.g., mouse or keyboard controls) are provided in real time, Deep Forcing substantially reduces visual fidelity degradation (e.g., color shifts and vehicle distortion).
+                </p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">Matrix-Game 2.0</div>
+                        <video class="video-player" src="videos/original_demo_icon.mp4" autoplay loop muted playsinline
+                        data-prompt="Matrix-Game 2.0 is I2V model."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Ours (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/deep10_demo_icon.mp4" autoplay loop muted playsinline
+                        data-prompt="Matrix-Game 2.0 is I2V model."></video>
+                    </div>
+                </div>
+                <p></p>
+                <h3 class="subsection-spacer">Static Scene</h3>
+                <p>
+                    When no action input (e.g., mouse or keyboard controls) is provided, Matrix-Game-2.0 begins to degrade rapidly at around <b>10s</b>. In contrast, Deep Forcing can maintain a stable world even without action inputs, preventing such degradation.
+                </p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">Matrix-Game 2.0</div>
+                        <video class="video-player" src="videos/static_world_original.mp4" autoplay loop muted playsinline
+                        data-prompt="Matrix-Game 2.0 is I2V model."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Ours (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/static_world_demo_icon_DP.mp4" autoplay loop muted playsinline
+                        data-prompt="Matrix-Game 2.0 is I2V model."></video>
+                    </div>
+                </div>
+            </section>
+
+            <section id="causal-forcing" class="section">
+                <h2>On Causal Forcing</h2>
+                <p class="paragraph">
+                    Our methods can also be applied to Causal Forcing. Deep Sink and Participative Compression effectively mitigate error accumulation and color drift in Causal Forcing.
+                </p>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">Causal Forcing</div>
+                        <video class="video-player" src="videos/causal_monster.mp4" autoplay loop muted playsinline
+                        data-prompt="A close-up 3D animated scene of a short, fluffy monster kneeling beside a melting red candle. The monster has large, wide eyes and an open mouth, gazing at the flame with a look of wonder and curiosity. Its soft, fluffy fur contrasts with the warm, dramatic lighting that highlights every detail of its gentle, innocent expression. The pose conveys a sense of playfulness and exploration, as if the creature is discovering the world for the first time. The background features a cozy, warmly lit room with subtle hints of a fireplace and soft furnishings, enhancing the overall atmosphere. The use of warm colors and dramatic lighting creates a captivating and inviting scene."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Ours (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/Deep_causal_monster.mp4" autoplay loop muted playsinline
+                        data-prompt="A close-up 3D animated scene of a short, fluffy monster kneeling beside a melting red candle. The monster has large, wide eyes and an open mouth, gazing at the flame with a look of wonder and curiosity. Its soft, fluffy fur contrasts with the warm, dramatic lighting that highlights every detail of its gentle, innocent expression. The pose conveys a sense of playfulness and exploration, as if the creature is discovering the world for the first time. The background features a cozy, warmly lit room with subtle hints of a fireplace and soft furnishings, enhancing the overall atmosphere. The use of warm colors and dramatic lighting creates a captivating and inviting scene."></video>
+                    </div>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-label">Causal Forcing</div>
+                        <video class="video-player" src="videos/causal_santorini.mp4" autoplay loop muted playsinline
+                        data-prompt="An aerial view of Santorini during the blue hour, capturing the stunning architecture of white Cycladic buildings with blue domes against the twilight sky. The caldera views are breathtaking, with the volcanic cliffs and sea below creating a dramatic contrast. The lighting casts a soft, warm glow, enhancing the serene atmosphere. The image has a dreamy, almost ethereal quality, emphasizing the beauty of the setting. A bird's-eye view with a wide-angle lens, focusing on the intricate details of the buildings and the vast expanse of the caldera."></video>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-label">Ours (<em>Training-Free</em>)</div>
+                        <video class="video-player" src="videos/Deep_causal_santorini.mp4" autoplay loop muted playsinline
+                        data-prompt="An aerial view of Santorini during the blue hour, capturing the stunning architecture of white Cycladic buildings with blue domes against the twilight sky. The caldera views are breathtaking, with the volcanic cliffs and sea below creating a dramatic contrast. The lighting casts a soft, warm glow, enhancing the serene atmosphere. The image has a dreamy, almost ethereal quality, emphasizing the beauty of the setting. A bird's-eye view with a wide-angle lens, focusing on the intricate details of the buildings and the vast expanse of the caldera."></video>
                     </div>
                 </div>
             </section>
